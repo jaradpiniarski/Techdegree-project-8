@@ -1,0 +1,224 @@
+
+/*============================*/
+/*========== MOBILE ==========*/
+/*============================*/
+
+body {
+    position: relative;
+    background-color: #fff;
+    margin: 0;
+    font-family: 'Arial Narrow', sans-serif;
+    padding: 3%;
+}
+
+.header h1 {
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+    row-gap: 20px;   
+}
+
+.card {
+    border: 2px solid #DFDFDF;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;   
+}
+
+.avatar {
+    border-radius: 50%;
+    padding: 20px;
+    width: 25vw;
+}
+
+.text-container h2 {
+    font-size: 1.2em;
+}
+
+.text-container p {
+    font-size: .9em;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(100, 100, 100, 0.4);          
+}
+    
+.modal {
+    width: 300px;
+    margin: 15% auto auto;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #778;
+    border-radius: 5px;
+    padding: 30px 20px;   
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%); 
+}
+    
+.modal-content .avatar {
+    width: 25vw;
+}
+
+.modal-content .text-container p {
+    font-size: 1em;
+}
+
+.modal-close {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    cursor: pointer;   
+}
+
+.hidden {
+    display: none;    
+} 
+
+.card[data-index="12"],
+.card[data-index="13"],
+.card[data-index="14"],
+.card[data-index="15"],
+.card[data-index="16"],
+.card[data-index="17"],
+.card[data-index="18"],
+.card[data-index="19"],
+.card[data-index="20"],
+.card[data-index="21"],
+.card[data-index="22"],
+.card[data-index="23"] {
+    display: none;
+}
+
+
+/*============================*/
+/*========== TABLET ==========*/
+/*============================*/
+
+@media (min-width: 768px) {
+   
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .avatar {
+        width: 10vw;
+    }
+        
+    .modal {
+        width: 375px;
+        transform: translate(-50%, -80%); 
+    }
+        
+    .modal-content .avatar {
+        width: 12vw;
+    }
+}
+
+
+/*=====================================*/
+/*========== TABLET / LAPTOP ==========*/
+/*=====================================*/
+
+@media (min-width: 1024px) {
+    body {
+        padding: 0 3% 3% 3%;
+    }
+
+    .header h1 {
+        padding: 35px 0 30px 0;
+    }
+
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr repeat(3);
+        column-gap: 25px;
+        row-gap: 25px;   
+    }
+
+    .card {
+        font-size: 1em; 
+    }
+
+    .avatar {
+        width: 8vw;
+    }
+
+    .modal-content .avatar {
+        width: 11vw;
+    }
+
+    .card[data-index="12"],
+    .card[data-index="13"],
+    .card[data-index="14"],
+    .card[data-index="15"],
+    .card[data-index="16"],
+    .card[data-index="17"],
+    .card[data-index="18"],
+    .card[data-index="19"],
+    .card[data-index="20"],
+    .card[data-index="21"],
+    .card[data-index="22"],
+    .card[data-index="23"] {
+        display: flex;
+    }
+}
+
+
+/*=============================*/
+/*========== DESKTOP ==========*/
+/*=============================*/
+
+@media (min-width: 1300px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr repeat(3);
+        column-gap: 25px;
+        row-gap: 25px;   
+    }
+
+    
+    .avatar {
+        width: 6vw;
+    }
+
+    .modal {
+        transform: translate(-50%, -100%); 
+    }
+
+    .modal-content .avatar {
+        width: 10vw;
+    }
+}
+
+
+/*===================================*/
+/*========== LARGE MONITOR ==========*/
+/*===================================*/
+
+@media (min-width: 1500px) {
+    .avatar {
+        width: 5vw;
+    }
+
+    .modal {
+        transform: translate(-50%, -100%); 
+    }
+
+    .modal-content .avatar {
+        width: 9vw;
+    }
+}
